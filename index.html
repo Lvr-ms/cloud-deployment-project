@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEROXDXB</title>
+    <style>
+        body {
+            font-family: Baskerville Old Face, Baskerville Old Face;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #727880;
+            color: white;
+            padding: 50px;
+        }
+        section {
+            padding: 20px;
+        }
+        .destination {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .destination div {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .destination img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .destination div:hover img {
+            transform: scale(1.1);
+        }
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .destination div:hover .description {
+            opacity: 1;
+        }
+        footer {
+            background-color: #727880;
+            color: white;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function goToPage(place) {
+            window.location.href = `destination.html?place=${encodeURIComponent(place)}`;
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="C:\Users\syeda\OneDrive\Desktop\Screenshot 2025-03-02 010031.png" alt="Company Logo" width="550" height="136">
+        <h1>Explore the UAE</h1>
+        <p>Your gateway to the wonders of the United Arab Emirates</p>
+	<button onclick="showAbout()">About</button>
+    </header>
+
+	<script>
+        function showAbout(About) {
+            window.location.href = `about.html?place=${encodeURIComponent(About)}`;
+        }
+    </script>
+
+
+    <section>
+        <h2>Top Tourist Destinations</h2>
+        <div class="destination">
+            <div onclick="goToPage('Burj Khalifa')">
+                <img src="https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg" alt="Burj Khalifa">
+		<h2>Burj Khalifa</h2>
+                <div class="description">Visit the tallest building in the world and enjoy stunning views of Dubai.</div>
+            </div>
+            <div onclick="goToPage('Desert Safari')">
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/bb/6a/7b.jpg" alt="Desert Safari">
+		<h2>Desert Safari</h2>
+                <div class="description">Experience the beauty of the Arabian desert with thrilling dune bashing and camel rides.</div>
+            </div>
+            <div onclick="goToPage('Palm Jumeirah')">
+                <img src="https://res.cloudinary.com/dkhns25jh/image/upload/v1724137410/xr_media/va7bdzolp2paowim3fke.jpg" alt="Palm Jumeirah">
+		<h2>Palm Jumeirah</h2>
+                <div class="description">Relax and unwind on the artificial island with luxury resorts and pristine beaches.</div>
+            </div>
+        </div>
+
+        <h1>Explore More Destinations</h1>
+        <div class="destination">
+            <div onclick="goToPage('Sheikh Zayed Grand Mosque')">
+                <img src="https://www.thrillark.com/blog/wp-content/uploads/2024/12/david-rodrigo-kZ1zThg6G40-unsplash-2-1024x683.jpg" alt="Sheikh Zayed Grand Mosque">
+		<h2>Sheikh Zayed Grand Mosque</h2>
+                <div class="description">Marvel at the largest mosque in the UAE, known for its stunning architecture and serene atmosphere.</div>
+            </div>
+            <div onclick="goToPage('Louvre Abu Dhabi')">
+                <img src="https://mbsarchi.com/wp-content/uploads/2024/09/louvre-scaled.jpg">
+		<h2>Louvre Abu Dhabi</h2>
+                <div class="description">Explore world-class art and exhibits at the iconic Louvre museum in Abu Dhabi.</div>
+            </div>
+            <div onclick="goToPage('Yas Island')">
+                <img src="https://static.myconnect.ae/-/media/yasconnect/project/yww/yas-waterworld/extra-hero-image/about-the-park-720x480.jpg" alt="Yas Island">
+		<h2>Yas Island</h2>
+                <div class="description">Experience thrilling rides at Ferrari World or unwind at Yas Marina Circuit and luxury resorts.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tourism in UAE. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

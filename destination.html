@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination</title>
+    <style>
+        body {
+            font-family: Baskerville Old Face, Baskerville Old Face;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        #content {
+            margin-top: 50px;
+        }
+        img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #727880;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        const destinations = {
+            "Burj Khalifa": {
+                img: "https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg",
+                details: "Burj Khalifa – The world's tallest structure, standing at 828 meters (2,717 feet) in Dubai, UAE. Completed in 2010, this architectural marvel, designed by Skidmore, Owings & Merrill and developed by Emaar Properties, draws inspiration from Islamic architecture. It houses luxurious residences, corporate offices, the Armani Hotel, and fine dining establishments. Visitors can enjoy breathtaking views from the 148th-floor observation deck and experience the iconic Dubai Fountain at its base. Recognized as a symbol of innovation and economic growth, Burj Khalifa holds multiple world records and continues to captivate millions worldwide."
+            },
+            "Desert Safari": {
+                img: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/bb/6a/7b.jpg",
+                details: "Desert Safari – A thrilling adventure that showcases the beauty of the Arabian Desert in the UAE. Visitors can experience dune bashing in powerful 4x4 vehicles, enjoy camel rides, and witness mesmerizing sunset views over the golden sands. The experience also includes traditional Bedouin-style camps, where guests can indulge in Arabic cuisine, henna painting, falconry, and cultural performances such as Tanoura dance and belly dancing. Offering a perfect blend of adventure and cultural immersion, the Desert Safari is a must-try experience for those seeking an authentic taste of Emirati heritage."
+            },
+            "Palm Jumeirah": {
+                img: "https://www.nakheel.com/images/nakheelcorporatelibraries/general/nakheel-view.jpg",
+                details: "Palm Jumeirah is an artificial archipelago located off the coast of Dubai, United Arab Emirates. Designed in the shape of a palm tree, it is one of the world’s most iconic and ambitious real estate developments. The project consists of a series of luxury hotels, private residences, retail outlets, and entertainment venues, making it a prominent symbol of Dubai’s innovative spirit and world-class tourism. The Palm Jumeirah was developed by Nakheel, a state-owned property developer in Dubai. Construction of the island began in 2001, and it was completed in stages, with the first homes ready by 2006. The development involved the dredging of 94 million cubic meters of sand to create the shape of the palm, surrounded by a crescent-shaped breakwater designed to protect it from the sea."
+            },
+            "Sheikh Zayed Grand Mosque": {
+                img: "https://upload.wikimedia.org/wikipedia/en/7/7d/Sheikh_Zayed_Mosque_view.jpg",
+                details: "The Sheikh Zayed Grand Mosque is one of the largest and most majestic mosques in the world, located in Abu Dhabi, United Arab Emirates. Named after the founder and first president of the UAE, Sheikh Zayed bin Sultan Al Nahyan, the mosque is a symbol of the cultural and religious diversity of the UAE, as well as a center of Islamic worship and learning. Construction of the Sheikh Zayed Grand Mosque began in 1996 and was completed in 2007. The mosque was designed by Syrian architect Yousef Abdelky, with the aim of combining traditional Islamic architecture with modern design elements. The project was a significant cultural and architectural feat, reflecting both Islamic heritage and the UAE's ambition to create a landmark of global importance."
+            },
+            "Louvre Abu Dhabi": {
+                img: "https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2023/04/19/Louvreextcropped.jpg",
+                details: " Louvre Abu Dhabi is a world-class art museum located in the Saadiyat Island Cultural District of Abu Dhabi, United Arab Emirates. Opened in November 2017, it is the first museum of its kind in the Arab world. It is a collaboration between the UAE and France, underpinned by a 30-year agreement, marking a significant cultural initiative aimed at bridging cultures and fostering dialogue through art and heritage. The museum was designed by French architect Jean Nouvel, and its creation was part of Abu Dhabi's vision to establish itself as a global cultural hub. The design of the Louvre Abu Dhabi is inspired by traditional Arabic architectural elements, blending modernism with Islamic influences. The museum was built as a cultural landmark, with the aim of creating a space for both permanent and temporary exhibitions that span thousands of years of human history."
+            },
+            "Yas Island": {
+                img: "https://static.myconnect.ae/-/media/yasconnect/project/yww/yas-waterworld/extra-hero-image/about-the-park-720x480.jpg",
+                details: "Yas Island is a premier leisure, entertainment, and hospitality destination located in Abu Dhabi, United Arab Emirates. Situated just 30 minutes from the heart of Abu Dhabi city, Yas Island is a man-made island that has become a symbol of the UAE's commitment to creating world-class entertainment and tourism experiences. The island is home to some of the most iconic attractions in the region, making it a popular destination for both tourists and residents. Yas Island was developed by Aldar Properties, one of the UAE’s leading real estate development companies. The island covers approximately 25 square kilometers and has undergone rapid development since its inception. What began as a relatively undeveloped area has transformed into a major hub for leisure, sports, and luxury hospitality, significantly contributing to the UAE’s tourism and entertainment industry."
+            }
+        };
+
+        function loadDestination() {
+            const params = new URLSearchParams(window.location.search);
+            const place = params.get("place");
+
+            if (destinations[place]) {
+                document.title = place;
+                document.getElementById("title").textContent = place;
+                document.getElementById("image").src = destinations[place].img;
+                document.getElementById("details").textContent = destinations[place].details;
+            }
+        }
+    </script>
+</head>
+<body onload="loadDestination()">
+
+    <div id="content">
+        <h1 id="title"></h1>
+        <img id="image" src="" alt="Destination Image">
+        <p id="details"></p>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</body>
+</html>

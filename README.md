@@ -30,7 +30,7 @@ This project was developed over multiple weeks with continuous updates and impro
 - index.html
 - destination.html
 - about.html
-- Screenshots and instructions (for documentation)
+- (coding attached)
 
 # Tools Used
 

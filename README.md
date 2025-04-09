@@ -15,7 +15,7 @@ The website includes the following pages:
 - Home (index.html)
 - Destinations (destination.html)
 - About (about.html)
-
+- privacy & policy (privacy&policy.html)
 # Deployment Summary
 
 - AWS EC2 instance (Ubuntu 22.04)

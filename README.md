@@ -3,6 +3,7 @@
 **Student Number:** 35151196  
 **University:** Murdoch university 
 **Course:** ICT171 Introduction to Server Environments and Architectures
+GitHub Repository: https://github.com/Lvr-ms/cloud-deployment-project 
 
 ## Video explainer
 [Watch on YouTube] https://youtu.be/YYLq6Ek0lOQ

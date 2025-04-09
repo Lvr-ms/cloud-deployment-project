@@ -4,6 +4,9 @@
 **University:** Murdoch university 
 **Course:** ICT171 Introduction to Server Environments and Architectures
 
+## Video explainer
+[Watch on YouTube] https://youtu.be/YYLq6Ek0lOQ
+
 # Project Overview
 
 This project involves deploying a static HTML website using Amazon Web Services (AWS).  
@@ -39,4 +42,3 @@ This project was developed over multiple weeks with continuous updates and impro
 - GitHub
 - Namecheap (domain)
 - Ubuntu Terminal
-
